@@ -1,1 +1,4 @@
 project-plan.md
+venv/
+__pycache__/
+qdrant_storage/
