@@ -1,4 +1,9 @@
+# project plannings
 project-plan.md
+ToDo's.md
+
+# Python
 venv/
 __pycache__/
+# Qdrant
 qdrant_storage/
