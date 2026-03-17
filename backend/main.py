@@ -1,6 +1,6 @@
 from typing import List, Literal
 
-from fastapi import FastAPI
+from fastapi import FastAPI, File, UploadFile, HTTPException
 from pydantic import BaseModel
 from ollama_client import prompt_ollama
 
@@ -30,3 +30,7 @@ async def chat(request: ChatRequest):
     messages = [message.model_dump() for message in request.messages]
     response = prompt_ollama(messages)
     return {"response": response.model_dump()}
+
+@app.post("/documents/upload")
+async def add_documents(document: str):
+    return {"message": "Documents added successfully"}
